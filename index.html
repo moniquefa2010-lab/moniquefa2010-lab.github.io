@@ -18,50 +18,52 @@
 
         .container {
             display: flex;
-            max-width: 1250px;
-            margin: 50px auto;
-            gap: 80px;
+            max-width: 1100px;
+            margin: 60px auto;
+            gap: 60px;
             align-items: flex-start;
+            justify-content: center;
             padding: 20px;
         }
 
         .left-column {
-            width: 300px;
+            width: 260px;
             flex-shrink: 0;
         }
 
         .right-column {
-            flex: 1;
-            max-width: 850px;
+            width: 760px;
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 34px;
             font-weight: 600;
             margin-bottom: 20px;
+            line-height: 1.1;
         }
 
         h2 {
-            font-size: 38px;
+            font-size: 30px;
             font-weight: 500;
             margin-top: 0;
             margin-bottom: 20px;
         }
 
         h3 {
-            font-size: 30px;
+            font-size: 24px;
+            margin-top: 0;
             margin-bottom: 15px;
         }
 
         p {
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.7;
             margin-bottom: 25px;
         }
 
         img {
-            width: 260px;
-            height: 310px;
+            width: 240px;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -75,19 +77,19 @@
             margin-right: 18px;
             text-decoration: none;
             color: #0077cc;
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        /* PROJECT CARD */
+        /* PROJECT CARDS */
 
         .project-row {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             align-items: flex-start;
-            background: white;
-            padding: 28px;
+            background: #ffffff;
+            padding: 24px;
             border-radius: 10px;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .project-image-container {
@@ -106,41 +108,30 @@
             border-radius: 10px;
         }
 
-        .project-text h3 {
-            margin-top: 0;
-        }
-
         @media (max-width: 900px) {
 
             .container {
                 flex-direction: column;
-                margin: 30px auto;
                 gap: 30px;
+                margin: 30px auto;
             }
 
             .left-column,
             .right-column {
                 width: 100%;
-                max-width: 100%;
             }
 
             .project-row {
                 flex-direction: column;
             }
 
-            .project-image-container,
-            .project-text {
+            .project-image-container {
                 width: 100%;
             }
 
             .project-image {
                 width: 100%;
                 height: auto;
-            }
-
-            img {
-                width: 240px;
-                height: 280px;
             }
 
         }
@@ -162,9 +153,8 @@
             <img src="profile.jpg" alt="Monique Favela Profile Picture">
 
             <p>
-                Business Administration graduate focused on
-                Information Systems, analytics, operations,
-                public administration, sports analytics,
+                Business Administration graduate focused on Information Systems,
+                analytics, operations, public administration, sports analytics,
                 and community impact.
             </p>
 
@@ -201,10 +191,11 @@
             </p>
 
             <p>
-               I enjoy building dashboards, analyzing data, and creating projects using Python, 
-                Streamlit, R, SQL, and data visualization tools. These projects reflect my interest
-                in using technology and data to solve real problems, improve systems, and create
-                more efficient user experiences. 
+                I enjoy building dashboards, analyzing data, and creating projects
+                using Python, Streamlit, R, SQL, and data visualization tools.
+                These projects reflect my interest in using technology and data
+                to solve real problems, improve systems, and create more efficient
+                user experiences.
             </p>
 
             <h2>Projects</h2>
@@ -266,42 +257,26 @@
 
             <!-- PROJECT 3 -->
 
-           <div class="project-row">
+            <div class="project-row">
 
-    <div class="project-image-container">
+                <div class="project-image-container">
 
-        <img class="project-image"
-             src="Sentiment - MLK:MalcomX.png"
-             alt="Sentiment Analysis using R">
+                    <img class="project-image"
+                         src="Sentiment - MLK:MalcomX.png"
+                         alt="Sentiment Analysis using R">
 
-    </div>
+                </div>
 
-    <div class="project-text">
+                <div class="project-text">
 
                     <h3>Sentiment Analysis using R</h3>
 
                     <p>
                         Data analytics project using R to scrape and analyze
-                        sentiment from online text sources through text mining,
-                        sentiment scoring, and data visualization.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- PROJECT 4 -->
-
-            <div class="project-row">
-
-                <div class="project-text">
-
-                    <h3>Python Data Visualization Project</h3>
-
-                    <p>
-                        Business analytics project using Python visualizations
-                        to analyze trends, comparisons, and insights
-                        through charts and graphs.
+                        sentiment from speeches and online text sources.
+                        Used text mining, sentiment scoring, ggplot
+                        visualizations, and web scraping techniques to
+                        compare emotional trends across authors.
                     </p>
 
                 </div>
