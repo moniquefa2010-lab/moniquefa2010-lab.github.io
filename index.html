@@ -1,44 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Monique Favela</title>
 
     <style>
 
         body {
-            font-family: Arial;
-            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             color: #222;
             margin: 0;
-            padding: 40px;
+            padding: 0;
         }
 
         .container {
             display: flex;
-            max-width: 1200px;
-            margin: auto;
-            gap: 60px;
+            max-width: 1100px;
+            margin: 80px auto;
+            gap: 70px;
             align-items: flex-start;
+            padding: 20px;
         }
 
         .left-column {
-            width: 30%;
+            width: 280px;
+            flex-shrink: 0;
         }
 
         .right-column {
-            width: 70%;
+            flex: 1;
         }
 
         h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
+            font-size: 48px;
+            margin-bottom: 15px;
         }
 
         h2 {
             font-size: 42px;
+            margin-top: 0;
             margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -47,28 +58,11 @@
         }
 
         img {
-            width: 260px;
-            height: 260px;
+            width: 240px;
+            height: 300px;
             object-fit: cover;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-
-        .project {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            margin-top: 20px;
-        }
-
-        .project h3 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #0077cc;
-            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 10px;
         }
 
         .links {
@@ -77,7 +71,16 @@
 
         .links a {
             margin-right: 20px;
+            text-decoration: none;
+            color: #0077cc;
             font-size: 18px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
         }
 
     </style>
@@ -93,7 +96,7 @@
 
             <h1>Monique Favela</h1>
 
-            <img src="/profile.jpg" alt="Monique Favela Profile Picture">
+            <img src="profile.jpg" alt="Monique Favela Profile Picture">
 
             <p>
                 Business Administration student focused on
@@ -122,9 +125,9 @@
             <h2>About Me</h2>
 
             <p>
-                I'm currently a senior at California State University
-                Monterey Bay studying Business Administration with a
-                concentration in Information Systems & Analytics.
+                I'm currently a senior at California State University Monterey Bay
+                studying Business Administration with a concentration in
+                Information Systems & Analytics.
             </p>
 
             <p>
@@ -148,7 +151,7 @@
                     Interactive Streamlit dashboard analyzing U.S.
                     housing affordability using HUD and FHFA data.
                     Includes state comparisons, affordability rankings,
-                    trend analysis, and data visualizations.
+                    trend analysis, and visual analytics.
                 </p>
 
             </div>
@@ -159,7 +162,7 @@
 
                 <p>
                     Python Streamlit application that generates
-                    downloadable QR codes in real time through
+                    downloadable QR codes in real time using
                     a user-friendly interface.
                 </p>
 
@@ -170,7 +173,7 @@
                 <h3>Player Performance Analyzer</h3>
 
                 <p>
-                    Python-based analytics application with a Tkinter GUI
+                    Python analytics application with a Tkinter GUI
                     that evaluates player statistics and salary data
                     to identify undervalued or overpaid athletes.
                 </p>
