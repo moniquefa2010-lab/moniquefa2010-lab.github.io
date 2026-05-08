@@ -49,8 +49,8 @@
         }
 
         h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 30px;
+            margin-bottom: 15px;
         }
 
         p {
@@ -67,13 +67,6 @@
             margin-bottom: 20px;
         }
 
-        .project-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
         .links {
             margin-top: 10px;
         }
@@ -85,14 +78,37 @@
             font-size: 18px;
         }
 
-        .project {
-            background: #ffffff;
+        /* PROJECT LAYOUT */
+
+        .project-row {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            background: white;
             padding: 28px;
             border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
-        @media (max-width: 800px) {
+        .project-image-container {
+            width: 45%;
+        }
+
+        .project-text {
+            width: 55%;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .project-text h3 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 900px) {
 
             .container {
                 flex-direction: column;
@@ -104,6 +120,15 @@
             .right-column {
                 width: 100%;
                 max-width: 100%;
+            }
+
+            .project-row {
+                flex-direction: column;
+            }
+
+            .project-image-container,
+            .project-text {
+                width: 100%;
             }
 
             img {
@@ -122,6 +147,7 @@
     <div class="container">
 
         <!-- LEFT COLUMN -->
+
         <div class="left-column">
 
             <h1>Monique Favela</h1>
@@ -150,6 +176,7 @@
         </div>
 
         <!-- RIGHT COLUMN -->
+
         <div class="right-column">
 
             <h2>About Me</h2>
@@ -174,59 +201,83 @@
             <h2>Projects</h2>
 
             <!-- PROJECT 1 -->
-            <div class="project">
 
-                <h3>HousingPulse Dashboard</h3>
+            <div class="project-row">
 
-                <img class="project-image"
-                     src="housingpulse.png?v=2""
-                     alt="HousingPulse Dashboard">
+                <div class="project-image-container">
 
-                <p>
-                    Interactive Streamlit dashboard analyzing U.S.
-                    housing affordability using HUD and FHFA data.
-                    Features affordability rankings, trend analysis,
-                    state comparisons, and visual analytics.
-                </p>
+                    <img class="project-image"
+                         src="housingpulse.png"
+                         alt="HousingPulse Dashboard">
+
+                </div>
+
+                <div class="project-text">
+
+                    <h3>HousingPulse Dashboard</h3>
+
+                    <p>
+                        Interactive Streamlit dashboard analyzing U.S.
+                        housing affordability using HUD and FHFA data.
+                        Features affordability rankings, trend analysis,
+                        state comparisons, and visual analytics.
+                    </p>
+
+                </div>
 
             </div>
 
             <!-- PROJECT 2 -->
-            <div class="project">
 
-                <h3>Player Performance & Salary Value Analyzer</h3>
+            <div class="project-row">
 
-                <p>
-                    Python-based analytics application with a Tkinter GUI
-                    that evaluates player statistics and salary data
-                    to identify undervalued and overpaid athletes.
-                </p>
+                <div class="project-text">
+
+                    <h3>Player Performance & Salary Value Analyzer</h3>
+
+                    <p>
+                        Python-based analytics application with a Tkinter GUI
+                        that evaluates player statistics and salary data
+                        to identify undervalued and overpaid athletes.
+                    </p>
+
+                </div>
 
             </div>
 
             <!-- PROJECT 3 -->
-            <div class="project">
 
-                <h3>Sentiment Analysis using R</h3>
+            <div class="project-row">
 
-                <p>
-                    Data analytics project using R to scrape and analyze
-                    sentiment from online text sources through text mining,
-                    sentiment scoring, and data visualization.
-                </p>
+                <div class="project-text">
+
+                    <h3>Sentiment Analysis using R</h3>
+
+                    <p>
+                        Data analytics project using R to scrape and analyze
+                        sentiment from online text sources through text mining,
+                        sentiment scoring, and data visualization.
+                    </p>
+
+                </div>
 
             </div>
 
             <!-- PROJECT 4 -->
-            <div class="project">
 
-                <h3>Python Data Visualization Project</h3>
+            <div class="project-row">
 
-                <p>
-                    Business analytics project using Python visualizations
-                    to analyze trends, comparisons, and insights
-                    through charts and graphs.
-                </p>
+                <div class="project-text">
+
+                    <h3>Python Data Visualization Project</h3>
+
+                    <p>
+                        Business analytics project using Python visualizations
+                        to analyze trends, comparisons, and insights
+                        through charts and graphs.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -237,4 +288,3 @@
 </body>
 
 </html>
-        
