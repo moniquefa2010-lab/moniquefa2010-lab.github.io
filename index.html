@@ -1,222 +1,341 @@
-<style>
+<!DOCTYPE html>
+<html>
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        color: #222;
-        margin: 0;
-        padding: 40px;
-    }
+<head>
+    <title>Monique Favela</title>
 
-    .container {
-        display: flex;
-        max-width: 980px;
-        margin: 0 auto;
-        gap: 55px;
-        align-items: flex-start;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            margin: 0;
+            padding: 60px;
+        }
 
-    /* LEFT COLUMN */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 80px;
+            align-items: flex-start;
+        }
 
-    .left-column {
-        width: 230px;
-        flex-shrink: 0;
-    }
+        /* LEFT COLUMN */
+        .left-column {
+            width: 300px;
+            text-align: center;
+            position: sticky;
+            top: 40px;
+        }
 
-    .left-column h1 {
-        font-size: 42px;
-        line-height: 0.95;
-        margin-bottom: 22px;
-        font-weight: bold;
-    }
+        .left-column h1 {
+            font-size: 62px;
+            line-height: 0.95;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-align: left;
+        }
 
-    .profile-image {
-        width: 230px;
-        height: 280px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 20px;
-    }
+        .profile-image {
+            width: 300px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
 
-    .left-column p {
-        font-size: 15px;
-        line-height: 1.7;
-        color: #333;
-    }
+        .left-column p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: left;
+            color: #333;
+        }
 
-    .links {
-        margin-top: 18px;
-    }
+        .resume-button {
+            margin-top: 30px;
+            text-align: left;
+        }
 
-    .links a {
-        text-decoration: none;
-        color: #0077cc;
-        font-size: 16px;
-        margin-right: 16px;
-    }
+        .resume-button a {
+            display: inline-block;
+            border: 2px solid #0077cc;
+            color: #0077cc;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
 
-    .resume-button {
-        margin-top: 16px;
-    }
+        .resume-button a:hover {
+            background: #0077cc;
+            color: white;
+        }
 
-    .resume-button a {
-        text-decoration: none;
-        color: #0077cc;
-        font-size: 16px;
-    }
+        /* RIGHT COLUMN */
+        .right-column {
+            flex: 1;
+        }
 
-    /* RIGHT COLUMN */
+        .right-column h2 {
+            font-size: 74px;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
 
-    .right-column {
-        flex: 1;
-    }
+        .right-column p {
+            font-size: 22px;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
 
-    .right-column h2 {
-        font-size: 38px;
-        margin-bottom: 22px;
-    }
+        /* TOP LINKS */
+        .top-links {
+            margin-top: 10px;
+            margin-bottom: 50px;
+            font-size: 22px;
+        }
 
-    .right-column p {
-        font-size: 17px;
-        line-height: 1.8;
-        margin-bottom: 28px;
-    }
+        .top-links a {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-    /* PROJECTS */
+        .top-links a:hover {
+            text-decoration: underline;
+        }
 
-    .project-row {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        background: white;
-        padding: 24px;
-        border-radius: 14px;
-        margin-top: 24px;
-    }
+        /* PROJECTS */
+        .projects-title {
+            font-size: 74px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
 
-    .project-image-container {
-        width: 250px;
-        flex-shrink: 0;
-    }
+        .project-card {
+            background: #fafafa;
+            border-radius: 18px;
+            padding: 35px;
+            margin-bottom: 35px;
 
-    .project-image {
-        width: 250px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
 
-    .project-text {
-        flex: 1;
-    }
+        .project-image {
+            width: 420px;
+            border-radius: 12px;
+        }
 
-    .project-text h3 {
-        font-size: 26px;
-        margin-bottom: 14px;
-    }
+        .project-text {
+            flex: 1;
+        }
 
-    .project-text p {
-        font-size: 16px;
-        line-height: 1.7;
-        margin: 0;
-    }
+        .project-text h3 {
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
 
-</style>
+        .project-text p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* MOBILE */
+        @media (max-width: 1000px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left-column {
+                width: 100%;
+                position: static;
+            }
+
+            .project-card {
+                flex-direction: column;
+            }
+
+            .project-image {
+                width: 100%;
+            }
+
+            .right-column h2,
+            .projects-title {
+                font-size: 52px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
     <div class="container">
 
+        <!-- LEFT SIDE -->
         <div class="left-column">
 
-            <h1>Monique Favela</h1>
+            <h1>
+                Monique<br>
+                Favela
+            </h1>
 
-            <img class="profile-image" src="profile.jpg" alt="Monique Favela">
+            <img class="profile-image"
+                src="profile.jpg"
+                alt="Monique Favela">
 
-            <div class="links">
-                <a href="https://github.com/moniquefa2010-lab" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-            </div>
+            <p>
+                Business Administration graduate focused on
+                Information Systems, analytics, operations,
+                public administration, sports analytics,
+                and community impact.
+            </p>
 
             <div class="resume-button">
-                <a href="MF_resume2026.pdf" target="_blank">Resume</a>
+                <a href="MF_resume2026.pdf" target="_blank">
+                    Resume
+                </a>
             </div>
 
         </div>
 
+        <!-- RIGHT SIDE -->
         <div class="right-column">
 
             <h2>About Me</h2>
 
             <p>
-                I recently graduated from California State University Monterey Bay
-                with a degree in Business Administration and a concentration in
-                Information Systems & Analytics.
+                I recently graduated from California State University
+                Monterey Bay with a degree in Business Administration
+                and a concentration in Information Systems & Analytics.
             </p>
 
             <p>
-                My interests include data analytics, healthcare systems, operations,
-                sports analytics, public administration, and using technology to
-                improve systems that support my community.
+                My interests include data analytics, healthcare systems,
+                operations, sports analytics, public administration,
+                and using technology to improve systems that support
+                my community.
             </p>
 
             <p>
-                I enjoy building dashboards, analyzing data, and creating projects
-                using Python, Streamlit, R, SQL, and data visualization tools.
+                I enjoy building dashboards, analyzing data,
+                and creating projects using Python, Streamlit,
+                R, SQL, and data visualization tools.
             </p>
 
-            <div class="nav-links">
-                <a href="#projects">Projects</a> / 
-                <a href="MF_resume2026.pdf" target="_blank">Resume</a> / 
-                <a href="https://github.com/moniquefa2010-lab" target="_blank">GitHub</a>
+            <!-- LINKS MOVED HERE -->
+            <div class="top-links">
+
+                <a href="#projects">Projects</a>
+
+                &nbsp;/&nbsp;
+
+                <a href="MF_resume2026.pdf" target="_blank">
+                    Resume
+                </a>
+
+                &nbsp;/&nbsp;
+
+                <a href="https://github.com/moniquefa2010-lab"
+                    target="_blank">
+                    GitHub
+                </a>
+
+                &nbsp;/&nbsp;
+
+                <a href="https://linkedin.com/in/YOUR-LINK"
+                    target="_blank">
+                    LinkedIn
+                </a>
+
             </div>
 
-            <h2 id="projects">Projects</h2>
+            <!-- PROJECTS -->
+            <div id="projects">
 
-            <div class="project-row">
-                <div class="project-image-container">
-                    <img class="project-image" src="housingpulse.png" alt="HousingPulse Dashboard">
+                <div class="projects-title">
+                    Projects
                 </div>
 
-                <div class="project-text">
-                    <h3>HousingPulse Dashboard</h3>
-                    <p>
-                        Interactive Streamlit dashboard analyzing U.S. housing affordability
-                        using HUD and FHFA data. Features affordability rankings, trend
-                        analysis, state comparisons, and visual analytics.
-                    </p>
-                </div>
-            </div>
+                <!-- PROJECT 1 -->
+                <div class="project-card">
 
-            <div class="project-row">
-                <div class="project-image-container">
-                    <img class="project-image" src="playerAnalyzer.png" alt="Player Analyzer">
-                </div>
+                    <img class="project-image"
+                        src="housingpulse.png"
+                        alt="HousingPulse Dashboard">
 
-                <div class="project-text">
-                    <h3>Player Performance & Salary Analyzer</h3>
-                    <p>
-                        Python-based analytics application with a Tkinter GUI that evaluates
-                        player statistics and salary data to identify undervalued and
-                        overpaid athletes.
-                    </p>
-                </div>
-            </div>
+                    <div class="project-text">
 
-            <div class="project-row">
-                <div class="project-image-container">
-                    <img class="project-image" src="sentiment.png" alt="Sentiment Analysis">
+                        <h3>
+                            HousingPulse Dashboard
+                        </h3>
+
+                        <p>
+                            Interactive Streamlit dashboard analyzing
+                            U.S. housing affordability using HUD and FHFA data.
+                            Features affordability rankings, trend analysis,
+                            state comparisons, and visual analytics.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="project-text">
-                    <h3>Sentiment Analysis using R</h3>
-                    <p>
-                        Data analytics project using R to scrape and analyze sentiment
-                        from online text sources through text mining, sentiment scoring,
-                        and data visualization techniques.
-                    </p>
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+
+                    <img class="project-image"
+                        src="playerAnalyzer.png"
+                        alt="Player Analyzer">
+
+                    <div class="project-text">
+
+                        <h3>
+                            Player Performance & Salary Analyzer
+                        </h3>
+
+                        <p>
+                            Python-based analytics application with a Tkinter GUI
+                            that evaluates player statistics and salary data
+                            to identify undervalued or overpaid athletes.
+                        </p>
+
+                    </div>
+
                 </div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+
+                    <img class="project-image"
+                        src="Sentiment - MLK:MalcomX.png"
+                        alt="Sentiment Analysis">
+
+                    <div class="project-text">
+
+                        <h3>
+                            Sentiment Analysis using R
+                        </h3>
+
+                        <p>
+                            Data analytics project using R to scrape and analyze
+                            sentiment from online text sources through text mining,
+                            sentiment scoring, and data visualization.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
