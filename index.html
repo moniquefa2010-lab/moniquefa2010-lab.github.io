@@ -78,7 +78,7 @@
             font-size: 18px;
         }
 
-        /* PROJECT LAYOUT */
+        /* PROJECT CARD */
 
         .project-row {
             display: flex;
@@ -91,16 +91,18 @@
         }
 
         .project-image-container {
-            width: 45%;
+            width: 280px;
+            flex-shrink: 0;
         }
 
         .project-text {
-            width: 55%;
+            flex: 1;
         }
 
         .project-image {
-            width: 100%;
-            height: auto;
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
             border-radius: 10px;
         }
 
@@ -129,6 +131,11 @@
             .project-image-container,
             .project-text {
                 width: 100%;
+            }
+
+            .project-image {
+                width: 100%;
+                height: auto;
             }
 
             img {
