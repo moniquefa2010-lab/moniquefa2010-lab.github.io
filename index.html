@@ -29,6 +29,8 @@
         .left-column {
             width: 260px;
             flex-shrink: 0;
+            position: sticky;
+            top: 40px;
         }
 
         .right-column {
@@ -36,93 +38,104 @@
         }
 
         h1 {
-            font-size: 34px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            line-height: 1.1;
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1;
         }
 
         h2 {
-            font-size: 30px;
+            font-size: 48px;
             font-weight: 500;
             margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 24px;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.7;
             margin-bottom: 25px;
         }
 
-        img {
-            width: 240px;
-            height: 300px;
+        h3 {
+            font-size: 26px;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 260px;
+            height: 340px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
 
         .links {
-            margin-top: 10px;
-        }
-
-        .links a {
-            margin-right: 18px;
-            text-decoration: none;
-            color: #0077cc;
-            font-size: 16px;
-        }
-
-        /* PROJECT CARDS */
-
-        .project-row {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            background: #ffffff;
-            padding: 24px;
-            border-radius: 10px;
             margin-top: 20px;
         }
 
+        .links a {
+            margin-right: 25px;
+            text-decoration: none;
+            color: #0077cc;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* PROJECTS */
+
+        .project-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 22px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
         .project-image-container {
-            width: 280px;
+            width: 320px;
             flex-shrink: 0;
+        }
+
+        .project-image {
+            width: 320px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         .project-text {
             flex: 1;
         }
 
-        .project-image {
-            width: 280px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
+        .project-text p {
+            margin-bottom: 0;
         }
 
         @media (max-width: 900px) {
 
             .container {
                 flex-direction: column;
-                gap: 30px;
-                margin: 30px auto;
+                gap: 40px;
             }
 
-            .left-column,
+            .left-column {
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+
             .right-column {
                 width: 100%;
             }
 
             .project-row {
                 flex-direction: column;
+                align-items: flex-start;
             }
 
             .project-image-container {
@@ -148,9 +161,11 @@
 
         <div class="left-column">
 
-            <h1>Monique Favela</h1>
+            <h1>Monique<br>Favela</h1>
 
-            <img src="profile.jpg" alt="Monique Favela Profile Picture">
+            <img class="profile-image"
+                 src="profile.jpg"
+                 alt="Monique Favela">
 
             <p>
                 Business Administration graduate focused on Information Systems,
