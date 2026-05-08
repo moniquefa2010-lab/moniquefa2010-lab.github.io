@@ -5,54 +5,52 @@
     <title>Monique Favela</title>
 
     <style>
+
         body {
             font-family: Arial, sans-serif;
             background: #f5f5f5;
             color: #222;
             margin: 0;
-            padding: 60px;
+            padding: 40px;
         }
 
+        /* MAIN CONTAINER */
         .container {
-            max-width: 1200px;
+            max-width: 1150px;
             margin: 0 auto;
             display: flex;
-            gap: 80px;
+            justify-content: center;
+            gap: 70px;
             align-items: flex-start;
         }
 
-        /* LEFT COLUMN */
+        /* LEFT SIDE */
         .left-column {
-            width: 300px;
-            text-align: center;
-            position: sticky;
-            top: 40px;
+            width: 260px;
         }
 
         .left-column h1 {
-            font-size: 62px;
+            font-size: 48px;
             line-height: 0.95;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-weight: bold;
-            text-align: left;
         }
 
         .profile-image {
-            width: 300px;
-            border-radius: 16px;
-            margin-bottom: 30px;
+            width: 260px;
+            border-radius: 14px;
+            margin-bottom: 25px;
         }
 
         .left-column p {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.8;
-            text-align: left;
             color: #333;
         }
 
+        /* RESUME BUTTON */
         .resume-button {
-            margin-top: 30px;
-            text-align: left;
+            margin-top: 25px;
         }
 
         .resume-button a {
@@ -61,9 +59,8 @@
             color: #0077cc;
             padding: 10px 18px;
             border-radius: 8px;
-            font-size: 20px;
+            font-size: 18px;
             text-decoration: none;
-            transition: 0.2s;
         }
 
         .resume-button a:hover {
@@ -71,81 +68,82 @@
             color: white;
         }
 
-        /* RIGHT COLUMN */
+        /* RIGHT SIDE */
         .right-column {
             flex: 1;
+            max-width: 760px;
         }
 
         .right-column h2 {
-            font-size: 74px;
+            font-size: 56px;
             margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .right-column p {
-            font-size: 22px;
+            font-size: 18px;
             line-height: 1.9;
-            margin-bottom: 35px;
+            margin-bottom: 28px;
         }
 
-        /* TOP LINKS */
+        /* LINKS */
         .top-links {
-            margin-top: 10px;
-            margin-bottom: 50px;
-            font-size: 22px;
+            margin-top: 15px;
+            margin-bottom: 45px;
+            font-size: 18px;
         }
 
         .top-links a {
             color: #0077cc;
             text-decoration: none;
-            font-weight: 500;
         }
 
         .top-links a:hover {
             text-decoration: underline;
         }
 
-        /* PROJECTS */
+        /* PROJECT TITLE */
         .projects-title {
-            font-size: 74px;
-            margin-bottom: 40px;
+            font-size: 56px;
             font-weight: bold;
+            margin-bottom: 30px;
         }
 
+        /* PROJECT CARD */
         .project-card {
             background: #fafafa;
-            border-radius: 18px;
-            padding: 35px;
-            margin-bottom: 35px;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 28px;
 
             display: flex;
             align-items: center;
-            gap: 35px;
+            gap: 28px;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
+        /* PROJECT IMAGE */
         .project-image {
-            width: 420px;
+            width: 320px;
             border-radius: 12px;
         }
 
+        /* PROJECT TEXT */
         .project-text {
             flex: 1;
         }
 
         .project-text h3 {
-            font-size: 32px;
+            font-size: 24px;
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .project-text p {
-            font-size: 20px;
+            font-size: 17px;
             line-height: 1.7;
             margin: 0;
-        }
-
-        a {
-            text-decoration: none;
         }
 
         /* MOBILE */
@@ -157,7 +155,6 @@
 
             .left-column {
                 width: 100%;
-                position: static;
             }
 
             .project-card {
@@ -170,9 +167,10 @@
 
             .right-column h2,
             .projects-title {
-                font-size: 52px;
+                font-size: 42px;
             }
         }
+
     </style>
 
 </head>
@@ -201,9 +199,11 @@
             </p>
 
             <div class="resume-button">
+
                 <a href="MF_resume2026.pdf" target="_blank">
                     Resume
                 </a>
+
             </div>
 
         </div>
@@ -220,19 +220,20 @@
             </p>
 
             <p>
-                My interests include data analytics, healthcare systems,
-                operations, sports analytics, public administration,
-                and using technology to improve systems that support
-                my community.
+                My interests include data analytics,
+                healthcare systems, operations,
+                sports analytics, public administration,
+                and using technology to improve systems
+                that support my community.
             </p>
 
             <p>
                 I enjoy building dashboards, analyzing data,
-                and creating projects using Python, Streamlit,
-                R, SQL, and data visualization tools.
+                and creating projects using Python,
+                Streamlit, R, SQL, and data visualization tools.
             </p>
 
-            <!-- LINKS MOVED HERE -->
+            <!-- LINKS -->
             <div class="top-links">
 
                 <a href="#projects">Projects</a>
@@ -327,9 +328,10 @@
                         </h3>
 
                         <p>
-                            Data analytics project using R to scrape and analyze
-                            sentiment from online text sources through text mining,
-                            sentiment scoring, and data visualization.
+                            Data analytics project using R to scrape
+                            and analyze sentiment from online text sources
+                            through text mining, sentiment scoring,
+                            and data visualization.
                         </p>
 
                     </div>
