@@ -17,29 +17,32 @@
 
         .container {
             display: flex;
-            max-width: 1100px;
-            margin: 80px auto;
-            gap: 70px;
+            max-width: 1250px;
+            margin: 50px auto;
+            gap: 80px;
             align-items: flex-start;
             padding: 20px;
         }
 
         .left-column {
-            width: 280px;
+            width: 300px;
             flex-shrink: 0;
         }
 
         .right-column {
             flex: 1;
+            max-width: 850px;
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         h2 {
-            font-size: 42px;
+            font-size: 38px;
+            font-weight: 500;
             margin-top: 0;
             margin-bottom: 20px;
         }
@@ -50,34 +53,54 @@
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 25px;
         }
 
         img {
-            width: 240px;
-            height: 300px;
+            width: 260px;
+            height: 310px;
             object-fit: cover;
-            border-radius: 10px;
-            margin-top: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         .links {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .links a {
-            margin-right: 20px;
+            margin-right: 18px;
             text-decoration: none;
             color: #0077cc;
             font-size: 18px;
         }
 
         .project {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 25px;
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                margin: 30px auto;
+                gap: 30px;
+            }
+
+            .left-column,
+            .right-column {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            img {
+                width: 240px;
+                height: 280px;
+            }
         }
     </style>
 </head>
@@ -114,9 +137,9 @@
             </p>
 
             <p>
-                My interests include data analytics, healthcare systems,
-                operations, sports analytics, public administration, and using
-                technology to improve systems that support my community.
+                My interests include data analytics, healthcare systems, operations,
+                sports analytics, public administration, and using technology to improve
+                systems that support my community.
             </p>
 
             <p>
@@ -129,27 +152,27 @@
             <div class="project">
                 <h3>HousingPulse Dashboard</h3>
                 <p>
-                    Interactive Streamlit dashboard analyzing U.S. housing
-                    affordability using HUD and FHFA data. Features affordability
-                    rankings, trend analysis, state comparisons, and visual analytics.
+                    Interactive Streamlit dashboard analyzing U.S. housing affordability
+                    using HUD and FHFA data. Features affordability rankings, trend
+                    analysis, state comparisons, and visual analytics.
                 </p>
             </div>
 
             <div class="project">
                 <h3>Player Performance & Salary Value Analyzer</h3>
                 <p>
-                    Python-based analytics application with a Tkinter GUI that
-                    evaluates player statistics and salary data to identify
-                    undervalued and overpaid athletes.
+                    Python-based analytics application with a Tkinter GUI that evaluates
+                    player statistics and salary data to identify undervalued and
+                    overpaid athletes.
                 </p>
             </div>
 
             <div class="project">
                 <h3>Sentiment Analysis using R</h3>
                 <p>
-                    Data analytics project using R to scrape and analyze sentiment
-                    from online text sources through text mining, sentiment scoring,
-                    and data visualization.
+                    Data analytics project using R to scrape and analyze sentiment from
+                    online text sources through text mining, sentiment scoring, and data
+                    visualization.
                 </p>
             </div>
 
