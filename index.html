@@ -8,6 +8,14 @@
     <title>Monique Favela</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f5f5f5;
@@ -29,6 +37,7 @@
         /* LEFT SIDE */
         .left-column {
             width: 260px;
+            flex-shrink: 0;
         }
 
         .left-column h1 {
@@ -44,6 +53,7 @@
             max-width: 100%;
             border-radius: 14px;
             margin-bottom: 25px;
+            display: block;
         }
 
         .left-column p {
@@ -65,6 +75,7 @@
             border-radius: 8px;
             font-size: 18px;
             text-decoration: none;
+            transition: 0.2s ease;
         }
 
         .resume-button a:hover {
@@ -76,6 +87,7 @@
         .right-column {
             flex: 1;
             max-width: 760px;
+            min-width: 0;
         }
 
         .right-column h2 {
@@ -90,11 +102,12 @@
             margin-bottom: 28px;
         }
 
-        /* LINKS */
+        /* TOP LINKS */
         .top-links {
             margin-top: 15px;
             margin-bottom: 45px;
             font-size: 18px;
+            line-height: 1.8;
         }
 
         .top-links a {
@@ -123,6 +136,12 @@
             align-items: center;
             gap: 28px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
         /* PROJECT IMAGE */
@@ -130,11 +149,14 @@
             width: 320px;
             max-width: 100%;
             border-radius: 12px;
+            display: block;
+            flex-shrink: 0;
         }
 
         /* PROJECT TEXT */
         .project-text {
             flex: 1;
+            min-width: 0;
         }
 
         .project-text h3 {
@@ -147,6 +169,35 @@
             font-size: 17px;
             line-height: 1.7;
             margin: 0;
+        }
+
+        .project-tools {
+            margin-top: 15px !important;
+            color: #444;
+        }
+
+        /* PROJECT BUTTONS */
+        .project-links {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            background: #0077cc;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .project-links a:hover {
+            background: #005fa3;
+            transform: translateY(-1px);
         }
 
         /* MOBILE */
@@ -166,6 +217,7 @@
 
             .right-column {
                 width: 100%;
+                max-width: none;
             }
 
             .project-card {
@@ -180,6 +232,42 @@
             .right-column h2,
             .projects-title {
                 font-size: 42px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 18px;
+            }
+
+            .left-column h1 {
+                font-size: 40px;
+            }
+
+            .right-column h2,
+            .projects-title {
+                font-size: 36px;
+            }
+
+            .right-column p {
+                font-size: 17px;
+            }
+
+            .project-card {
+                padding: 18px;
+            }
+
+            .project-text h3 {
+                font-size: 22px;
+            }
+
+            .project-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .project-links a {
+                text-align: center;
             }
         }
     </style>
@@ -211,9 +299,13 @@
             </p>
 
             <div class="resume-button">
-              <a href="./resume.pdf" target="_blank" rel="noopener noreferrer">
-                Resume
-            </a>
+                <a
+                    href="./resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
             </div>
 
         </div>
@@ -224,16 +316,15 @@
             <h2>About Me</h2>
 
             <p>
-                I hold a Bachelor’s degree in Business Administration
-                and am currently pursuing a Master’s degree in Public Administration
-                at San José State University. My background combines operations,
-                analytics, and technology, with hands-on experience building
-                data-driven solutions using Python, SQL, Streamlit, and visualization
-                tools. Through both professional and academic projects, I focus on
-                improving workflows, analyzing complex data, and developing systems
-                that support smarter decision-making. I’m especially interested in
-                operations strategy, public-sector innovation, and using technology
-                to create efficient, community-focused solutions.
+                I hold a Bachelor's degree in Business Administration with a concentration in Information 
+                Systems and Analyticsand am currently pursuing a Master's degree in Public Administration
+                at San José State University. My background combines operations, data analytics, and
+                technology, with experience using Python, SQL, Streamlit, and data visualization tools to 
+                solve real-world problems. Through both my professional experience and academic projects, 
+                I've worked on improving processes, analyzing data, and building practical solutions that
+                support better decision-making. I'm passionate about finding ways to make organizations more
+                efficient, especially in the public sector, and I hope to use technology and data to create
+                meaningful, community-focused solutions.
             </p>
 
             <p>
@@ -242,7 +333,7 @@
                 and using technology to improve systems that support my community.
             </p>
 
-            <!-- LINKS -->
+            <!-- TOP LINKS -->
             <div class="top-links">
 
                 <a href="#projects">
@@ -251,9 +342,13 @@
 
                 &nbsp;/&nbsp;
 
-              <a href="./resume.pdf" target="_blank" rel="noopener noreferrer">
-                Resume
-            </a>
+                <a
+                    href="./resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
 
                 &nbsp;/&nbsp;
 
@@ -362,33 +457,53 @@
                 </div>
 
                 <!-- PROJECT 4 -->
+                <div class="project-card">
 
-                  <img src="pdfmerger.png" alt="PDF Merger">
+                    <img
+                        class="project-image"
+                        src="pdfmerger.png"
+                        alt="PDF Merger Application"
+                    >
 
-                <h3>📄 PDF Merger</h3>
+                    <div class="project-text">
+
+                        <h3>
+                            PDF Merger
+                        </h3>
 
                         <p>
-                            Merge multiple PDF files into one downloadable document using Python and Streamlit.
+                            A web application built with Python and Streamlit
+                            that allows users to upload multiple PDF files,
+                            merge them into one document, and download the
+                            completed PDF.
                         </p>
 
-                        <p>
-                          A web application built with Python and Streamlit that allows users
-                          to upload multiple PDF files, merge them into a single document,
-                            and download the finished PDF.
-                    </p>
+                        <p class="project-tools">
+                            <strong>Tools:</strong>
+                            Python • Streamlit • pypdf
+                        </p>
 
-                <p><strong>Tools:</strong> Python, Streamlit, pypdf</p>
+                        <div class="project-links">
 
-                <div class="project-links">
-                        <a href="https://YOUR-STREAMLIT-APP.streamlit.app" target="_blank">
-            Live Demo
-        </a>
+                            <a
+                                href="https://pdf-merger-eqqx45gulfbkdbqlkxdvnk.streamlit.app/"
+                            >
+                                Live Demo
+                            </a>
 
-        <a href="https://github.com/moniquefa2010-lab/pdf-merger" target="_blank">
-            GitHub
-        </a>
-    </div>
-</div>
+                            <a
+                                href="https://github.com/moniquefa2010-lab/pdf-merger"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Code
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
