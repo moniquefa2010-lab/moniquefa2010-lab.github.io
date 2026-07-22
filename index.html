@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Monique Favela</title>
 
     <style>
-
         body {
             font-family: Arial, sans-serif;
             background: #f5f5f5;
@@ -32,12 +34,14 @@
         .left-column h1 {
             font-size: 48px;
             line-height: 0.95;
+            margin-top: 0;
             margin-bottom: 25px;
             font-weight: bold;
         }
 
         .profile-image {
             width: 260px;
+            max-width: 100%;
             border-radius: 14px;
             margin-bottom: 25px;
         }
@@ -115,17 +119,16 @@
             border-radius: 16px;
             padding: 25px;
             margin-bottom: 28px;
-
             display: flex;
             align-items: center;
             gap: 28px;
-
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         /* PROJECT IMAGE */
         .project-image {
             width: 320px;
+            max-width: 100%;
             border-radius: 12px;
         }
 
@@ -148,17 +151,26 @@
 
         /* MOBILE */
         @media (max-width: 1000px) {
+            body {
+                padding: 25px;
+            }
 
             .container {
                 flex-direction: column;
+                gap: 40px;
             }
 
             .left-column {
                 width: 100%;
             }
 
+            .right-column {
+                width: 100%;
+            }
+
             .project-card {
                 flex-direction: column;
+                align-items: flex-start;
             }
 
             .project-image {
@@ -170,9 +182,7 @@
                 font-size: 42px;
             }
         }
-
     </style>
-
 </head>
 
 <body>
@@ -187,9 +197,11 @@
                 Favela
             </h1>
 
-            <img class="profile-image"
+            <img
+                class="profile-image"
                 src="profile.jpg"
-                alt="Monique Favela">
+                alt="Monique Favela"
+            >
 
             <p>
                 Business Administration graduate focused on
@@ -199,11 +211,13 @@
             </p>
 
             <div class="resume-button">
-
-               <a href="MF_Resume2026%20(1).pdf" target="_blank">
-                Resume
-            </a>
-
+                <a
+                    href="MF_Resume2026%20(1).pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
             </div>
 
         </div>
@@ -214,54 +228,59 @@
             <h2>About Me</h2>
 
             <p>
-               I hold a Bachelor’s degree in Business Administration 
+                I hold a Bachelor’s degree in Business Administration
                 and am currently pursuing a Master’s degree in Public Administration
-                at San José State University. My background combines operations, 
-                analytics, and technology, with hands-on experience building data-driven 
-                solutions using Python, SQL, Streamlit, and visualization tools. 
-                Through both professional and academic projects, I focus on 
+                at San José State University. My background combines operations,
+                analytics, and technology, with hands-on experience building
+                data-driven solutions using Python, SQL, Streamlit, and visualization
+                tools. Through both professional and academic projects, I focus on
                 improving workflows, analyzing complex data, and developing systems
-                that support smarter decision-making. I’m especially interested in 
-                operations strategy, public sector innovation, and using technology to
-                create efficient, community-focused solutions.
+                that support smarter decision-making. I’m especially interested in
+                operations strategy, public-sector innovation, and using technology
+                to create efficient, community-focused solutions.
             </p>
 
             <p>
-                My interests include data analytics,
-                healthcare systems, operations,
-                sports analytics, public administration,
-                and using technology to improve systems
-                that support my community.
-            </p>
-
-            <p>
-              
+                My interests include data analytics, healthcare systems,
+                operations, sports analytics, public administration,
+                and using technology to improve systems that support my community.
             </p>
 
             <!-- LINKS -->
             <div class="top-links">
 
-                <a href="#projects">Projects</a>
+                <a href="#projects">
+                    Projects
+                </a>
 
                 &nbsp;/&nbsp;
 
-               <a href="MF_Resume2026%20(1).pdf" target="_blank">
-                Resume
-               </a>
+                <a
+                    href="MF_Resume2026%20(1).pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
 
                 &nbsp;/&nbsp;
 
-                <a href="https://github.com/moniquefa2010-lab"
-                    target="_blank">
+                <a
+                    href="https://github.com/moniquefa2010-lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub
                 </a>
 
                 &nbsp;/&nbsp;
 
-                <a href="https://www.linkedin.com/in/monique-favela/ target="_blank">
-    LinkedIn
-</a>
-            
+                <a
+                    href="https://www.linkedin.com/in/monique-favela/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
                 </a>
 
             </div>
@@ -276,9 +295,11 @@
                 <!-- PROJECT 1 -->
                 <div class="project-card">
 
-                    <img class="project-image"
+                    <img
+                        class="project-image"
                         src="housingpulse.png"
-                        alt="HousingPulse Dashboard">
+                        alt="HousingPulse Dashboard"
+                    >
 
                     <div class="project-text">
 
@@ -300,14 +321,16 @@
                 <!-- PROJECT 2 -->
                 <div class="project-card">
 
-                    <img class="project-image"
+                    <img
+                        class="project-image"
                         src="playerAnalyzer.png"
-                        alt="Player Analyzer">
+                        alt="Player Performance and Salary Analyzer"
+                    >
 
                     <div class="project-text">
 
                         <h3>
-                            Player Performance & Salary Analyzer
+                            Player Performance &amp; Salary Analyzer
                         </h3>
 
                         <p>
@@ -323,14 +346,16 @@
                 <!-- PROJECT 3 -->
                 <div class="project-card">
 
-                    <img class="project-image"
-                        src="Sentiment - MLK:MalcomX.png"
-                        alt="Sentiment Analysis">
+                    <img
+                        class="project-image"
+                        src="Sentiment%20-%20MLK%3AMalcomX.png"
+                        alt="Sentiment Analysis"
+                    >
 
                     <div class="project-text">
 
                         <h3>
-                            Sentiment Analysis using R
+                            Sentiment Analysis Using R
                         </h3>
 
                         <p>
